@@ -1,0 +1,78 @@
+.titleBar {
+  height: var(--titlebar-height);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-3);
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border-subtle);
+  -webkit-app-region: drag;
+  user-select: none;
+  flex-shrink: 0;
+  z-index: var(--z-overlay);
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  -webkit-app-region: no-drag;
+}
+
+.brandName {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brandSub {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.dragRegion {
+  flex: 1;
+  height: 100%;
+  -webkit-app-region: drag;
+}
+
+.windowControls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  -webkit-app-region: no-drag;
+}
+
+.winBtn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.winBtn:hover {
+  color: var(--bg-base);
+}
+
+.minimize { background: rgba(250, 179, 135, 0.2); }
+.maximize { background: rgba(166, 227, 161, 0.2); }
+.close    { background: rgba(243, 139, 168, 0.2); }
+
+.minimize:hover { background: #fab387; }
+.maximize:hover { background: #a6e3a1; }
+.close:hover    { background: #f38ba8; }

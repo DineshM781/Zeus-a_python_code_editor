@@ -1,0 +1,61 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-base);
+}
+
+.workArea {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.sidePanel {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border-subtle);
+  overflow: hidden;
+  min-width: 160px;
+  max-width: 600px;
+  flex-shrink: 0;
+}
+
+.sideResizeHandle {
+  background: transparent;
+  width: 4px;
+  cursor: ew-resize;
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+.sideResizeHandle:hover {
+  background: var(--brand-primary);
+}
+
+.mainArea {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.bottomResizeHandle {
+  height: 4px;
+  cursor: ns-resize;
+  flex-shrink: 0;
+}
+
+.bottomPanel {
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-height: 80px;
+}

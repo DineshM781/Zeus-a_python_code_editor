@@ -1,0 +1,21 @@
+.editorWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.monacoContainer {
+  flex: 1;
+  overflow: hidden;
+}
+
+.breakpointGlyph {
+  background: #f38ba8;
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 5px 2px;
+  box-shadow: 0 0 4px rgba(243, 139, 168, 0.6);
+}

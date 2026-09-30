@@ -1,0 +1,34 @@
+.panel { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+.header { padding: 8px 12px 4px; flex-shrink: 0; }
+.title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; }
+.searchBar { padding: 6px 12px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid var(--border-subtle); flex-shrink: 0; }
+.searchInput {
+  width: 100%; background: var(--bg-surface); border: 1px solid var(--border-normal);
+  border-radius: var(--radius-sm); color: var(--text-primary); font: inherit;
+  font-size: 12px; padding: 5px 8px; outline: none;
+  transition: border-color var(--transition-fast);
+}
+.searchInput:focus { border-color: var(--brand-primary); }
+.searchOptions { display: flex; gap: 4px; align-items: center; }
+.optBtn {
+  padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600;
+  color: var(--text-muted); background: none; border: 1px solid transparent;
+  cursor: pointer; transition: all var(--transition-fast);
+}
+.optBtn:hover { border-color: var(--border-normal); color: var(--text-secondary); }
+.optBtn.active { border-color: var(--brand-primary); color: var(--brand-primary); background: rgba(124,106,245,0.1); }
+.searchBtn {
+  margin-left: auto; padding: 4px 10px; border-radius: var(--radius-sm);
+  background: var(--bg-surface); border: 1px solid var(--border-normal);
+  color: var(--text-secondary); font-size: 12px; cursor: pointer;
+}
+.searchBtn:hover { background: var(--bg-hover); }
+.searchBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+.tooMany { padding: 4px 12px; font-size: 11px; color: var(--color-warning); }
+.results { flex: 1; overflow-y: auto; }
+.noResults { padding: 16px 12px; font-size: 12px; color: var(--text-muted); }
+.result { padding: 6px 12px; cursor: pointer; border-bottom: 1px solid var(--border-subtle); transition: background var(--transition-fast); }
+.result:hover { background: var(--bg-hover); }
+.resultFile { font-size: 12px; font-weight: 500; color: var(--text-primary); display: flex; align-items: center; gap: 2px; }
+.resultLine { font-family: var(--font-mono); color: var(--text-muted); font-size: 11px; }
+.resultText { font-family: var(--font-mono); font-size: 11px; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px; }

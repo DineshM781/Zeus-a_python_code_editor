@@ -1,0 +1,20 @@
+.panel { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+.tabBar {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0; height: 32px; padding: 0 8px;
+}
+.tabs { display: flex; gap: 2px; }
+.tab {
+  padding: 0 12px; height: 30px;
+  border-radius: var(--radius-sm);
+  font-size: 12px; font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer; border: none; background: none;
+  transition: all var(--transition-fast);
+}
+.tab:hover { color: var(--text-primary); }
+.tab.active { color: var(--brand-primary); border-bottom: 2px solid var(--brand-primary); }
+.tabActions { display: flex; gap: 2px; }
+.content { flex: 1; overflow: hidden; display: flex; flex-direction: column; }

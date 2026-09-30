@@ -1,0 +1,198 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn var(--transition-fast) ease;
+}
+
+.modal {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-normal);
+  border-radius: var(--radius-xl);
+  width: min(800px, 92vw);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl), 0 0 40px rgba(124, 106, 245, 0.15);
+  animation: slideDown var(--transition-normal) ease;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aiChip {
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--brand-gradient);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.closeBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: none;
+  border: none;
+}
+.closeBtn:hover { background: var(--bg-hover); color: var(--text-primary); }
+
+.explanation {
+  padding: 12px 20px;
+  background: rgba(124, 106, 245, 0.06);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.explainLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.explanation p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.diffContainer {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.diffHeader {
+  padding: 8px 20px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.diffLabel {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.diffBody {
+  flex: 1;
+  overflow: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.diffLine {
+  display: flex;
+  align-items: flex-start;
+  padding: 1px 20px;
+  white-space: pre;
+}
+
+.added   { background: rgba(166, 227, 161, 0.08); }
+.removed { background: rgba(243, 139, 168, 0.08); }
+.context { color: var(--text-secondary); }
+
+.linePrefix {
+  width: 16px;
+  flex-shrink: 0;
+  color: var(--text-muted);
+  font-weight: 700;
+  user-select: none;
+}
+
+.added .linePrefix   { color: var(--color-success); }
+.removed .linePrefix { color: var(--color-error); }
+
+.lineText {
+  flex: 1;
+  overflow: hidden;
+}
+
+.added .lineText   { color: var(--color-success); }
+.removed .lineText { color: var(--color-error); }
+
+.newCode {
+  flex: 1;
+  padding: 16px 20px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  background: var(--bg-panel);
+}
+
+.rejectBtn {
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-normal);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.rejectBtn:hover { background: var(--bg-hover); color: var(--color-error); border-color: var(--color-error); }
+
+.applyBtn {
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--brand-gradient);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(124, 106, 245, 0.4);
+}
+.applyBtn:hover { opacity: 0.9; transform: translateY(-1px); }

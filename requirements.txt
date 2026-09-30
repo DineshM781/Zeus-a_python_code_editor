@@ -1,0 +1,55 @@
+# =============================================================================
+# ZEUS — A Python Coder (Python Environment Dependencies)
+# =============================================================================
+# This file specifies the Python libraries required by ZEUS for:
+#   1. Real-time Static Analysis & Diagnostics (Error Lens)
+#   2. Debugging via Debug Adapter Protocol (DAP)
+#   3. Interactive Jupyter Notebooks (.ipynb) & IPython Kernel
+#   4. Code Formatting & PEP 8 Style Enforcement
+#   5. Unit Testing & Test Generation (pytest)
+#   6. Autocompletion & Type Checking
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. Static Analysis & Diagnostics (Error Lens)
+# -----------------------------------------------------------------------------
+# Fast, offline static analysis without executing code.
+ruff>=0.4.0                 # Primary high-performance linter and diagnostics engine
+pyflakes>=3.2.0             # Fallback static analysis engine (pure Python)
+flake8>=7.0.0               # PEP 8, syntax error, and complexity checker
+
+# -----------------------------------------------------------------------------
+# 2. Debugging Engine (Debug Adapter Protocol - DAP)
+# -----------------------------------------------------------------------------
+# Powers ZEUS breakpoints, stepping, call stack, variables, and evaluation.
+debugpy>=1.8.0              # Microsoft Debug Adapter Protocol for Python 3
+
+# -----------------------------------------------------------------------------
+# 3. Interactive Notebook & REPL Kernel (.ipynb support)
+# -----------------------------------------------------------------------------
+# Required for running code cells inside ZEUS's built-in notebook view.
+ipykernel>=6.29.0           # Jupyter kernel for Python 3 execution
+jupyter_client>=8.6.0       # Jupyter protocol client
+ipython>=8.18.0             # Interactive Python shell & display system
+
+# -----------------------------------------------------------------------------
+# 4. Code Formatting (Format on Save & On-Demand)
+# -----------------------------------------------------------------------------
+# Configurable in ZEUS Settings: 'black' | 'ruff' | 'autopep8'
+black>=24.4.0               # Uncompromising Python code formatter
+autopep8>=2.0.4             # PEP 8 standard compliant formatter
+
+# -----------------------------------------------------------------------------
+# 5. Unit Testing & Test Runner
+# -----------------------------------------------------------------------------
+# Powers running test suites and validating AI-generated tests.
+pytest>=8.2.0               # Primary test runner framework
+pytest-cov>=5.0.0           # Test coverage measurement and reporting
+
+# -----------------------------------------------------------------------------
+# 6. Type Checking & Language Tooling (Optional / Recommended)
+# -----------------------------------------------------------------------------
+# Static type validation and IntelliSense autocompletion support.
+mypy>=1.10.0                # Static type checker for Python
+jedi>=0.19.0                # Static analysis tool for autocompletion & hover docs
+python-lsp-server>=1.11.0   # Python Language Server (LSP) for Monaco editor

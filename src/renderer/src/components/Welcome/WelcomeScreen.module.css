@@ -1,0 +1,159 @@
+.screen {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-base);
+  overflow-y: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 640px;
+  width: 100%;
+  padding: 40px 24px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.brandName {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.brandSub {
+  font-size: 14px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+.sectionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+  max-width: 580px;
+}
+
+.sectionCol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.actionList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.actionItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.actionItem:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-subtle);
+}
+
+.actionIcon {
+  display: flex;
+  align-items: center;
+  color: var(--brand-primary);
+  flex-shrink: 0;
+}
+
+.actionLabel {
+  flex: 1;
+}
+
+.actionKey {
+  font-size: 11px;
+  font-family: inherit;
+  color: var(--text-muted);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+}
+
+.shortcutList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shortcutRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+}
+
+.shortcutDesc {
+  color: var(--text-secondary);
+}
+
+.shortcutKey {
+  font-size: 11px;
+  font-family: inherit;
+  color: var(--text-muted);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+}
+
+.version {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}

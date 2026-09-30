@@ -1,0 +1,43 @@
+/* ============================================================
+   ZEUS — Theme Definitions (Monaco + UI Sync)
+   ============================================================ */
+
+/* Light theme overrides */
+[data-theme="zeus-light"] {
+  --bg-base:      #fafafa;
+  --bg-panel:     #f4f4f8;
+  --bg-surface:   #eeeeF2;
+  --bg-elevated:  #ffffff;
+  --bg-hover:     #e8e8f0;
+  --bg-active:    #ddddef;
+  --bg-selection: #c9c9e8;
+
+  --border-subtle:  #e4e4f0;
+  --border-normal:  #d0d0e0;
+  --border-strong:  #b8b8d0;
+  --border-focus:   #7c6af5;
+
+  --text-primary:   #1e1e2e;
+  --text-secondary: #585b70;
+  --text-muted:     #9399b2;
+  --text-accent:    #7c3aed;
+  --text-link:      #1d4ed8;
+
+  --brand-primary:  #7c3aed;
+  --brand-secondary: #a855f7;
+  --brand-gradient: linear-gradient(135deg, #7c3aed, #a855f7);
+  --brand-glow:     0 0 20px rgba(124, 58, 237, 0.2);
+
+  --color-error:   #dc2626;
+  --color-warning: #d97706;
+  --color-info:    #0891b2;
+  --color-hint:    #16a34a;
+  --color-success: #16a34a;
+
+  --lens-error-bg:   rgba(220,38,38,0.08);
+  --lens-error-text: #dc2626;
+  --lens-warn-bg:    rgba(217,119,6,0.08);
+  --lens-warn-text:  #d97706;
+  --lens-info-bg:    rgba(8,145,178,0.08);
+  --lens-info-text:  #0891b2;
+}

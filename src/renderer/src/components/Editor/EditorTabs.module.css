@@ -1,0 +1,70 @@
+.tabsContainer {
+  position: relative;
+  flex-shrink: 0;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  display: flex; align-items: center; gap: 5px;
+  padding: 0 12px;
+  height: 34px;
+  border-right: 1px solid var(--border-subtle);
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--bg-panel);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  position: relative;
+  min-width: 80px;
+  max-width: 200px;
+  flex-shrink: 0;
+}
+.tab:hover { background: var(--bg-hover); color: var(--text-primary); }
+.tab.active {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--brand-primary);
+}
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 2px;
+  background: var(--brand-primary);
+}
+.tab.pinned::before {
+  content: '📌';
+  font-size: 9px;
+  position: absolute;
+  top: 4px; right: 4px;
+}
+.tabIcon { font-size: 12px; flex-shrink: 0; }
+.tabName { overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
+.dirtyDot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--color-warning);
+  flex-shrink: 0;
+}
+.closeBtn {
+  width: 18px; height: 18px;
+  border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); font-size: 14px;
+  opacity: 0;
+  transition: opacity var(--transition-fast), background var(--transition-fast);
+  flex-shrink: 0;
+  cursor: pointer;
+  background: none; border: none;
+}
+.tab:hover .closeBtn { opacity: 1; }
+.tab.active .closeBtn { opacity: 1; }
+.closeBtn:hover { background: var(--bg-hover); color: var(--color-error); }

@@ -1,0 +1,109 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-panel);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.aiButtonWrapper {
+  position: relative;
+}
+
+.aiButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-md);
+  background: rgba(124, 106, 245, 0.12);
+  border: 1px solid rgba(124, 106, 245, 0.25);
+  color: var(--brand-primary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.aiButton:hover {
+  background: rgba(124, 106, 245, 0.22);
+  border-color: var(--brand-primary);
+}
+
+.aiButton.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(124, 106, 245, 0.3);
+  border-top-color: var(--brand-primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-normal);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-overlay);
+  min-width: 160px;
+  animation: fadeScale var(--transition-fast) ease;
+}
+
+@keyframes fadeScale {
+  from { transform: scale(0.96) translateY(-4px); opacity: 0; }
+  to   { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.menuItem {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  text-align: left;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  border: none;
+  background: none;
+}
+
+.menuItem:hover {
+  background: var(--bg-hover);
+  color: var(--brand-primary);
+}
+
+.errorPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(243, 139, 168, 0.12);
+  border: 1px solid rgba(243, 139, 168, 0.3);
+  color: var(--color-error);
+  font-size: 11px;
+  max-width: 400px;
+}
+
+.errorPill button {
+  color: var(--color-error);
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+}
